@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @sbagoudou
-- 👀 I’m interested in coding, learning new stuff, video games, etc.
-- 🌱 I’m currently learning java programing 
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 👀 I’m interested in the life the universe and everything.
+- 🌱 I’m currently in tatooine
+- 💞️ I’m looking to collaborate on Blackstar
+- 📫 How to reach me ... you can't
 
 <!---
 sbagoudou/sbagoudou is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
