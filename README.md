@@ -19,23 +19,6 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Lucide React** - Icon library
 - **Vite** - Build tool and development server
 
-
-## 📁 Project Structure
-
-portfolio/
-│
-├── public/
-│ ├── profile.jpg
-│ └── SAMIR_BAGOUDOU_RESUME.pdf
-│
-├── src/
-│ ├── App.tsx
-│ ├── main.tsx
-│ └── index.css
-│
-├── index.html
-└── package.json
-
 ## 📝 License
 
 MIT License - feel free to use this code for your own portfolio!
