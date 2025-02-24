@@ -263,7 +263,7 @@ function App() {
               {
                 title: 'R&D Engineer',
                 company: 'VIALINK',
-                period: '2021 - Present',
+                period: '10/2021 - Present',
                 description: 'Contributing to design and development of new features while maintaining high code quality standards.',
                 achievements: [
                   'Contribute to the design and development of new features',
@@ -276,7 +276,7 @@ function App() {
               {
                 title: 'Software Engineer',
                 company: 'Sopra Steria',
-                period: '2018 - 2021',
+                period: '10/2018 - 09/2021',
                 description: 'Full-time software engineer position focusing on client requirements and production stability.',
                 achievements: [
                   'Analyzed client requirements and wrote specifications',
