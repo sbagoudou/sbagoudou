@@ -111,7 +111,7 @@ function App() {
                 whileHover={{ opacity: 0.2 }}
               />
             </motion.div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">Fullstack Software Engineer</h2>
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">Backend Software Engineer</h2>
             <p className="text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">Software engineer since 2018 in Java and its related framework, I love crafting elegant solutions to complex problems with a passion for clean code and innovative technologies.</p>
             <p className="text-lg text-gray-500 mb-8">📍 Paris, France</p>
             <motion.a
