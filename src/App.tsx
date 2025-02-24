@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, BookOpen, Code2, Brain, Trophy, ExternalLink, Star, GitBranch } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, BookOpen, Code2, Brain, Trophy } from 'lucide-react';
 
 function App() {
   const fadeIn = {
@@ -10,12 +9,30 @@ function App() {
   };
 
   const techLogos = {
-    'Java': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
-    'Spring': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg',
-    'Angular': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg',
-    'Docker': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
-    'PostgreSQL': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
-    'Kubernetes': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg'
+    'Java Ecosystem': {
+      logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
+      description: 'Java 8+, Spring Boot 3, Spring Framework, REST APIs, SOAP, Hibernate, Tomcat, Lombok, Project Reactor, Maven'
+    },
+    'Frontend': {
+      logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg',
+      description: 'Angular 11+, TypeScript, NPM, HTML5, CSS3'
+    },
+    'Databases': {
+      logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
+      description: 'PostgreSQL, MySQL, MariaDB, Oracle, MongoDB, Liquibase'
+    },
+    'DevOps': {
+      logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
+      description: 'Docker, Kubernetes, Jenkins, CI/CD pipelines, Ansible'
+    },
+    'Development Tools': {
+      logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
+      description: 'GitHub, Bitbucket, Jenkins, SonarQube, JIRA, IntelliJ IDEA'
+    },
+    'Testing': {
+      logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/junit/junit-original.svg',
+      description: 'JUnit, Mockito, TestContainers, Integration Testing, E2E Testing'
+    }
   };
 
   return (
@@ -96,6 +113,7 @@ function App() {
             </motion.div>
             <h2 className="text-5xl font-bold text-gray-900 mb-6">Fullstack Software Engineer</h2>
             <p className="text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">Software engineer since 2018 in Java and its related framework, I love crafting elegant solutions to complex problems with a passion for clean code and innovative technologies.</p>
+            <p className="text-lg text-gray-500 mb-8">📍 Paris, France</p>
             <motion.a
               href="/SAMIR_BAGOUDOU_RESUME.pdf"
               download
@@ -119,7 +137,7 @@ function App() {
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">Technical Expertise</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(techLogos).map(([skill, logo], index) => (
+            {Object.entries(techLogos).map(([skill, { logo, description }], index) => (
               <motion.div
                 key={skill}
                 className="group relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
@@ -128,10 +146,11 @@ function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-4 mb-4">
                   <img src={logo} alt={skill} className="w-12 h-12" />
                   <h4 className="text-xl font-semibold text-gray-900">{skill}</h4>
                 </div>
+                <p className="text-gray-600 text-sm">{description}</p>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
@@ -180,16 +199,24 @@ function App() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">Professional Skills</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700">Strong team spirit and collaboration</span>
                   </li>
                   <li className="flex items-start">
-                    <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700">Quick integration into new teams and projects</span>
                   </li>
                   <li className="flex items-start">
-                    <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700">Easily adapts to new environments</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Teamwork and knowledge sharing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Problem-solving and analytical thinking</span>
                   </li>
                 </ul>
               </div>
@@ -261,12 +288,14 @@ function App() {
               {
                 title: 'Fullstack Developer Intern',
                 company: 'Sopra Steria',
-                period: '2018',
-                description: 'Internship position focusing on full-stack development.',
+                period: '02/2018 - 09/2018',
+                description: 'Internship position focusing on full-stack development and client requirements.',
                 achievements: [
                   'Analyzed client requirements and wrote specifications',
                   'Developed requested features with documentation',
-                  'Diagnosed and resolved production issues'
+                  'Diagnosed and resolved production issues',
+                  'Participated in agile ceremonies and team meetings',
+                  'Contributed to code reviews and testing'
                 ]
               }
             ].map((job, index) => (
@@ -286,7 +315,7 @@ function App() {
                   <ul className="space-y-2">
                     {job.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start">
-                        <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                        <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
                         <span className="text-gray-700">{achievement}</span>
                       </li>
                     ))}
@@ -365,7 +394,7 @@ function App() {
                   <div className="space-y-2">
                     {achievement.metrics.map((metric, i) => (
                       <div key={i} className="flex items-center text-white">
-                        <Star className="w-4 h-4 mr-2" />
+                        <Code2 className="w-4 h-4 mr-2" />
                         <span>{metric}</span>
                       </div>
                     ))}
