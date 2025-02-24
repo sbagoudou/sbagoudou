@@ -1,3 +1,3 @@
 # sbagoudou
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/sbagoudou/sbagoudou)
+My resume as a web page
