@@ -10,12 +10,12 @@ function App() {
   };
 
   const techLogos = {
-    'React': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
-    'TypeScript': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
-    'Node.js': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
-    'Python': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
-    'AWS': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg',
-    'Docker': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg'
+    'Java': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
+    'Spring': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg',
+    'Angular': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg',
+    'Docker': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
+    'PostgreSQL': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
+    'Kubernetes': 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg'
   };
 
   return (
@@ -27,40 +27,40 @@ function App() {
       </div>
 
       {/* Header */}
-      <motion.header 
+      <motion.header
         className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
-          <motion.h1 
+          <motion.h1
             className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-transparent bg-clip-text"
             whileHover={{ scale: 1.02 }}
           >
-            John Doe
+            Samir BAGOUDOU
           </motion.h1>
           <div className="flex space-x-6">
-            <motion.a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <motion.a
+              href="https://github.com/sbagoudou"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-indigo-600 transition-colors"
               whileHover={{ scale: 1.1, rotate: 5 }}
             >
               <Github className="w-6 h-6" />
             </motion.a>
-            <motion.a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <motion.a
+              href="https://linkedin.com/in/sbagoudou-dev"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 transition-colors"
               whileHover={{ scale: 1.1, rotate: -5 }}
             >
               <Linkedin className="w-6 h-6" />
             </motion.a>
-            <motion.a 
-              href="mailto:john@example.com" 
+            <motion.a
+              href="mailto:samir.bagoudou@gmail.com"
               className="text-gray-600 hover:text-purple-600 transition-colors"
               whileHover={{ scale: 1.1, rotate: 5 }}
             >
@@ -72,7 +72,7 @@ function App() {
 
       <main className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           className="text-center mb-24 relative"
           {...fadeIn}
         >
@@ -85,7 +85,7 @@ function App() {
               whileHover={{ scale: 1.05 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80"
+                src="/profile.jpg"
                 alt="Profile"
                 className="w-full h-full rounded-full object-cover shadow-2xl ring-4 ring-white"
               />
@@ -94,21 +94,23 @@ function App() {
                 whileHover={{ opacity: 0.2 }}
               />
             </motion.div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">Senior Software Developer</h2>
-            <p className="text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">Crafting elegant solutions to complex problems with a passion for clean code and innovative technologies</p>
-            <motion.button
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">Fullstack Software Engineer</h2>
+            <p className="text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">Software engineer since 2018 in Java and its related framework, I love crafting elegant solutions to complex problems with a passion for clean code and innovative technologies.</p>
+            <motion.a
+              href="/SAMIR_BAGOUDOU_RESUME.pdf"
+              download
               className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Download className="w-6 h-6 mr-3" />
               Download Resume
-            </motion.button>
+            </motion.a>
           </div>
         </motion.section>
 
         {/* Skills Section */}
-        <motion.section 
+        <motion.section
           className="mb-24"
           {...fadeIn}
         >
@@ -136,8 +138,92 @@ function App() {
           </div>
         </motion.section>
 
+        {/* Education & Additional Skills Section */}
+        <motion.section
+          className="mb-24"
+          {...fadeIn}
+        >
+          <h3 className="text-3xl font-bold mb-12 flex items-center">
+            <Brain className="w-8 h-8 mr-3 text-blue-600" />
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">Education & Skills</span>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Education Column */}
+            <motion.div
+              className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">Education</h4>
+              <div className="space-y-6">
+                <div>
+                  <h5 className="text-lg font-semibold text-indigo-600">Engineering Degree in Computer Science</h5>
+                  <p className="text-gray-700">Université de Technologie de Belfort-Montbéliard</p>
+                  <p className="text-sm text-gray-500">2015 - 2018 • Belfort, 90</p>
+                </div>
+                <div>
+                  <h5 className="text-lg font-semibold text-indigo-600">Bachelor's Degree in Computer Science</h5>
+                  <p className="text-gray-700">Ecole Supérieure des Télécommunications du Bénin</p>
+                  <p className="text-sm text-gray-500">2012 - 2014 • Cotonou</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Skills & Languages Column */}
+            <motion.div
+              className="space-y-8"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              {/* Professional Skills */}
+              <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">Professional Skills</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Strong team spirit and collaboration</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Quick integration into new teams and projects</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Star className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Easily adapts to new environments</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Languages */}
+              <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">Languages</h4>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-lg font-semibold text-gray-700">French</span>
+                      <span className="text-indigo-600">Native</span>
+                    </div>
+                    <div className="h-2 bg-gray-200 rounded-full">
+                      <div className="h-2 bg-indigo-600 rounded-full w-full"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-lg font-semibold text-gray-700">English</span>
+                      <span className="text-indigo-600">Fluent</span>
+                    </div>
+                    <div className="h-2 bg-gray-200 rounded-full">
+                      <div className="h-2 bg-indigo-600 rounded-full w-4/5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
         {/* Experience Section */}
-        <motion.section 
+        <motion.section
           className="mb-24"
           {...fadeIn}
         >
@@ -148,25 +234,39 @@ function App() {
           <div className="space-y-12">
             {[
               {
-                title: 'Senior Software Engineer',
-                company: 'Tech Corp',
-                period: '2020 - Present',
-                description: 'Led development of microservices architecture, improving system scalability by 300%',
+                title: 'R&D Engineer',
+                company: 'VIALINK',
+                period: '2021 - Present',
+                description: 'Contributing to design and development of new features while maintaining high code quality standards.',
                 achievements: [
-                  'Architected and implemented cloud-native solutions',
-                  'Mentored junior developers and led technical interviews',
-                  'Introduced automated testing, achieving 90% coverage'
+                  'Contribute to the design and development of new features',
+                  'Analyze and resolve production issues and bugs',
+                  'Write unit tests, integration tests, and end-to-end tests',
+                  'CI/CD pipeline setup and maintenance',
+                  'Facilitate SCRUM ceremonies as Scrum Master'
                 ]
               },
               {
                 title: 'Software Engineer',
-                company: 'StartUp Inc',
-                period: '2018 - 2020',
-                description: 'Developed and maintained multiple React applications with TypeScript',
+                company: 'Sopra Steria',
+                period: '2018 - 2021',
+                description: 'Full-time software engineer position focusing on client requirements and production stability.',
                 achievements: [
-                  'Reduced application bundle size by 45%',
-                  'Implemented CI/CD pipelines',
-                  'Led migration from JavaScript to TypeScript'
+                  'Analyzed client requirements and wrote specifications',
+                  'Developed requested features including test documentation',
+                  'Diagnosed and resolved production issues and bugs',
+                  'Managed CI/CD with Jenkins and Ansible scripts'
+                ]
+              },
+              {
+                title: 'Fullstack Developer Intern',
+                company: 'Sopra Steria',
+                period: '2018',
+                description: 'Internship position focusing on full-stack development.',
+                achievements: [
+                  'Analyzed client requirements and wrote specifications',
+                  'Developed requested features with documentation',
+                  'Diagnosed and resolved production issues'
                 ]
               }
             ].map((job, index) => (
@@ -198,32 +298,46 @@ function App() {
         </motion.section>
 
         {/* Projects Section */}
-        <motion.section 
+        <motion.section
           {...fadeIn}
         >
           <h3 className="text-3xl font-bold mb-12 flex items-center">
             <Trophy className="w-8 h-8 mr-3 text-blue-600" />
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">Featured Projects</span>
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">Technical Achievements</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: 'E-commerce Platform',
-                description: 'Built a full-stack e-commerce platform using Next.js and Node.js',
-                tech: ['Next.js', 'Node.js', 'MongoDB'],
-                metrics: ['50K+ Monthly Users', '99.9% Uptime', '2s Avg Load Time'],
-                image: 'https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+                title: 'Java Microservices Architecture',
+                description: 'Designed and implemented scalable microservices using Spring Boot and Spring Cloud',
+                tech: ['Spring Boot', 'Spring Cloud', 'Docker'],
+                metrics: ['High Availability', 'Scalable Architecture', 'Microservices'],
+                image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
               },
               {
-                title: 'AI Chat Application',
-                description: 'Developed a real-time chat application with AI integration',
-                tech: ['React', 'Python', 'TensorFlow'],
-                metrics: ['1M+ Messages', '98% Accuracy', '10ms Response Time'],
-                image: 'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+                title: 'CI/CD Pipeline Optimization',
+                description: 'Implemented and optimized automated deployment pipelines with comprehensive testing',
+                tech: ['Jenkins', 'Docker', 'Ansible'],
+                metrics: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code'],
+                image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              },
+              {
+                title: 'API Development & Integration',
+                description: 'Developed RESTful APIs and integrated third-party services with high performance',
+                tech: ['Spring REST', 'PostgreSQL', 'Hibernate'],
+                metrics: ['REST Architecture', 'API Security', 'Performance Optimization'],
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              },
+              {
+                title: 'Frontend Development',
+                description: 'Built responsive and interactive web applications using modern frameworks',
+                tech: ['Angular', 'TypeScript', 'RxJS'],
+                metrics: ['Responsive Design', 'Component Architecture', 'State Management'],
+                image: 'https://images.unsplash.com/photo-1547954575-855750c57bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
               }
-            ].map((project, index) => (
+            ].map((achievement, index) => (
               <motion.div
-                key={project.title}
+                key={achievement.title}
                 className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden"
                 whileHover={{ scale: 1.02 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -231,39 +345,31 @@ function App() {
                 transition={{ delay: index * 0.2 }}
               >
                 <div className="absolute inset-0">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
+                  <img
+                    src={achievement.image}
+                    alt={achievement.title}
                     className="w-full h-full object-cover opacity-20"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 via-indigo-600/90 to-purple-600/90 mix-blend-multiply" />
                 </div>
                 <div className="relative p-8">
-                  <h4 className="text-2xl font-bold text-white mb-3">{project.title}</h4>
-                  <p className="text-gray-100 mb-6">{project.description}</p>
+                  <h4 className="text-2xl font-bold text-white mb-3">{achievement.title}</h4>
+                  <p className="text-gray-100 mb-6">{achievement.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map(tech => (
+                    {achievement.tech.map(tech => (
                       <span key={tech} className="px-3 py-1 bg-white/20 text-white rounded-full text-sm backdrop-blur-sm">
                         {tech}
                       </span>
                     ))}
                   </div>
                   <div className="space-y-2">
-                    {project.metrics.map((metric, i) => (
+                    {achievement.metrics.map((metric, i) => (
                       <div key={i} className="flex items-center text-white">
-                        <GitBranch className="w-4 h-4 mr-2" />
+                        <Star className="w-4 h-4 mr-2" />
                         <span>{metric}</span>
                       </div>
                     ))}
                   </div>
-                  <motion.button
-                    className="mt-6 inline-flex items-center px-4 py-2 bg-white/20 text-white rounded-lg backdrop-blur-sm hover:bg-white/30 transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </motion.button>
                 </div>
               </motion.div>
             ))}
@@ -273,11 +379,11 @@ function App() {
 
       <footer className="bg-white/80 backdrop-blur-sm mt-24 py-12 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.p 
+          <motion.p
             className="text-gray-600"
             whileHover={{ scale: 1.02 }}
           >
-            © 2024 John Doe. Crafted with passion and precision.
+            © 2025 Samir BAGOUDOU • Paris, France
           </motion.p>
         </div>
       </footer>
