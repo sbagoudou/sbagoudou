@@ -157,7 +157,84 @@ function App() {
           </div>
         </motion.section>
 
-        {/* Education & Additional Skills Section */}
+        {/* Experience Section - Moved up */}
+        <motion.section
+          className="mb-24"
+          {...fadeIn}
+        >
+          <h3 className="text-3xl font-bold mb-12 flex items-center">
+            <BookOpen className="w-8 h-8 mr-3 text-purple-600" />
+            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">Professional Journey</span>
+          </h3>
+          <div className="space-y-12">
+            {[
+              {
+                title: 'R&D Engineer',
+                company: 'VIALINK',
+                period: '10/2021 - Present',
+                description: 'Contributing to design and development of new features while maintaining high code quality standards.',
+                achievements: [
+                  'Contribute to the design and development of new features',
+                  'Analyze and resolve production issues and bugs',
+                  'Write unit tests, integration tests, and end-to-end tests',
+                  'CI/CD pipeline setup and maintenance',
+                  'Facilitate SCRUM ceremonies as Scrum Master'
+                ]
+              },
+              {
+                title: 'Software Engineer',
+                company: 'Sopra Steria',
+                period: '10/2018 - 09/2021',
+                description: 'Full-time software engineer position focusing on client requirements and production stability.',
+                achievements: [
+                  'Analyzed client requirements and wrote specifications',
+                  'Developed requested features including test documentation',
+                  'Diagnosed and resolved production issues and bugs',
+                  'Managed CI/CD with Jenkins and Ansible scripts'
+                ]
+              },
+              {
+                title: 'Fullstack Developer Intern',
+                company: 'Sopra Steria',
+                period: '02/2018 - 09/2018',
+                description: 'Internship position focusing on full-stack development and client requirements.',
+                achievements: [
+                  'Analyzed client requirements and wrote specifications',
+                  'Developed requested features with documentation',
+                  'Diagnosed and resolved production issues',
+                  'Participated in agile ceremonies and team meetings',
+                  'Contributed to code reviews and testing'
+                ]
+              }
+            ].map((job, index) => (
+              <motion.div
+                key={job.title}
+                className="relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 rounded-l-2xl"></div>
+                <div className="ml-2">
+                  <h4 className="text-2xl font-bold text-gray-900">{job.title}</h4>
+                  <p className="text-lg font-semibold text-indigo-600 mb-2">{job.company}</p>
+                  <p className="text-sm text-gray-500 mb-4">{job.period}</p>
+                  <p className="text-gray-700 mb-4">{job.description}</p>
+                  <ul className="space-y-2">
+                    {job.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start">
+                        <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
+                        <span className="text-gray-700">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Education & Additional Skills Section - Moved down */}
         <motion.section
           className="mb-24"
           {...fadeIn}
@@ -246,83 +323,6 @@ function App() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </motion.section>
-
-        {/* Experience Section */}
-        <motion.section
-          className="mb-24"
-          {...fadeIn}
-        >
-          <h3 className="text-3xl font-bold mb-12 flex items-center">
-            <BookOpen className="w-8 h-8 mr-3 text-purple-600" />
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">Professional Journey</span>
-          </h3>
-          <div className="space-y-12">
-            {[
-              {
-                title: 'R&D Engineer',
-                company: 'VIALINK',
-                period: '10/2021 - Present',
-                description: 'Contributing to design and development of new features while maintaining high code quality standards.',
-                achievements: [
-                  'Contribute to the design and development of new features',
-                  'Analyze and resolve production issues and bugs',
-                  'Write unit tests, integration tests, and end-to-end tests',
-                  'CI/CD pipeline setup and maintenance',
-                  'Facilitate SCRUM ceremonies as Scrum Master'
-                ]
-              },
-              {
-                title: 'Software Engineer',
-                company: 'Sopra Steria',
-                period: '10/2018 - 09/2021',
-                description: 'Full-time software engineer position focusing on client requirements and production stability.',
-                achievements: [
-                  'Analyzed client requirements and wrote specifications',
-                  'Developed requested features including test documentation',
-                  'Diagnosed and resolved production issues and bugs',
-                  'Managed CI/CD with Jenkins and Ansible scripts'
-                ]
-              },
-              {
-                title: 'Fullstack Developer Intern',
-                company: 'Sopra Steria',
-                period: '02/2018 - 09/2018',
-                description: 'Internship position focusing on full-stack development and client requirements.',
-                achievements: [
-                  'Analyzed client requirements and wrote specifications',
-                  'Developed requested features with documentation',
-                  'Diagnosed and resolved production issues',
-                  'Participated in agile ceremonies and team meetings',
-                  'Contributed to code reviews and testing'
-                ]
-              }
-            ].map((job, index) => (
-              <motion.div
-                key={job.title}
-                className="relative bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-lg"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.2 }}
-              >
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 rounded-l-2xl"></div>
-                <div className="ml-2">
-                  <h4 className="text-2xl font-bold text-gray-900">{job.title}</h4>
-                  <p className="text-lg font-semibold text-indigo-600 mb-2">{job.company}</p>
-                  <p className="text-sm text-gray-500 mb-4">{job.period}</p>
-                  <p className="text-gray-700 mb-4">{job.description}</p>
-                  <ul className="space-y-2">
-                    {job.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start">
-                        <Code2 className="w-5 h-5 text-indigo-500 mr-2 flex-shrink-0 mt-1" />
-                        <span className="text-gray-700">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.section>
 
