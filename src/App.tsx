@@ -11,11 +11,11 @@ function App() {
   const techLogos = {
     'Java Ecosystem': {
       logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
-      description: 'Java 8+, Spring Boot 3, Spring Framework, REST APIs, SOAP, Hibernate, Tomcat, Lombok, Project Reactor, Maven'
+      description: 'Java 21, Spring Boot 3, Spring Framework, REST APIs, SOAP, Hibernate, Tomcat, Lombok, Project Reactor, Maven'
     },
     'Frontend': {
       logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg',
-      description: 'Angular 11+, TypeScript, NPM, HTML5, CSS3'
+      description: 'Angular 18, TypeScript, NPM, HTML5, CSS3'
     },
     'Databases': {
       logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
