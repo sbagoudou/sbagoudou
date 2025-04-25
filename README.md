@@ -2,6 +2,11 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations and a clean, professional design.
 
+## 🚀 How to deploy
+- First build the app "npm run build"
+- The build result is in the dist/ folder
+- The content of the folder can then be pasted on the server in the public_html folder
+
 ## 🌟 Features
 
 - Responsive design that works on all devices
